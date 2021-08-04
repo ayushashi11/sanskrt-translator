@@ -11,6 +11,7 @@ text = []
 print("\x1b[38;2;255;150;150m[ translating ]\x1b[0m ",tex)
 for token in doc:
     print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_, token.shape_)
+    continue
     if token.pos_=="PRON":
         if token.dep_=="nsubj":
             subjects.append(token.lemma_)
@@ -63,7 +64,7 @@ for token in doc:
         pass
     else:
         text.append(token.text)
-print("\x1b[38;2;150;255;150m[ result ]\x1b[0m ",list(complete_sandhi(' '.join(text))))
+print("\x1b[38;2;150;255;150m[ result ]\x1b[0m ",)#list(complete_sandhi(' '.join(text))))
 #@app.route('/api')
 #def api():
 #    return flask.jsonify(tex=complete_sandhi(text))

@@ -17,4 +17,4 @@ class Verb:
         self.__present = kwargs.get("presentfn", None) or fns[0]
     
     def present(self, pn):
-        return complete_sandhi(''.join(self.prefixes) + (self.kwargs.get("present"+pn, None) or self.__present(self,pn)))
+        return ' '.join(self.extras) + (' ' if len(self.extras)>0 else '') + complete_sandhi(''.join(self.prefixes) + (self.kwargs.get("present"+pn, None) or self.__present(self,pn)))

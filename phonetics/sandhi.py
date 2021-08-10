@@ -7,6 +7,19 @@ def complete_sandhi(text: str):
             .replace("rn","rṇ")\
             .replace("ṛn","ṛṇ")\
             .replace("sḳ","cch")\
+            .replace("dt","tt")\
+            .replace("ds","ts")\
+            .replace("ss","s")\
+            .replace("ks","kṣ")\
+            .replace("ct","kt")\
+            .replace("cs","kṣ")\
+            .replace("iṯ","iṣṭ")\
+            .replace("ṯi","ti")\
+            .replace("ṯ","st")\
+            .replace("hth","gdh")\
+            .replace("ht","gdh")\
+            .replace("hṉv","hanv")\
+            .replace("hṉm","hanm")\
             .replace("ea","aya")\
             .replace("oa","ava")\
             .replace("aia","āya")\

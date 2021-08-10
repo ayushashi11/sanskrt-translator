@@ -2,7 +2,7 @@ import re
 import itertools
 
 vowels = 'aāiīuūeoṛḷṁṉ'
-consonants = 'kgṅcjñṭḍṇtdnpbmyrlḻvśṣsh'
+consonants = 'kgṅcjñṭḍṇtdnpbmyrlḻvśṣshḵṯ'
 aspiratable_consonants = 'k|g|c|j|ṭ|ḍ|t|d|p|b'
 glottal = '\u097D'
 vowel_signs = '\u093E-\u094C\u093A-\u093B\u094E-\u094F\u0955-\u0957\u1CF8-\u1CF9'

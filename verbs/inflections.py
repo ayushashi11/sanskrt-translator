@@ -83,30 +83,32 @@ class Parasmaipadi(VerbSystem):
     
     def class3_present(v, pn):
         ret = v.cons + get_vowel(v.syllable)[0]
-        if pn == "1s":
-            ret += v.grade1 + "ti"
-        elif pn == "1d":
-            ret += v.syllable + "taḥ"
-        elif pn == "1p":
-            ret += v.grade0 + "anti"
-        elif pn == "2s":
-            ret += v.grade1 + "si"
-        elif pn == "2d":
-            ret += v.syllable + "thaḥ"
-        elif pn == "2p":
-            ret += v.syllable + "tha"
-        elif pn == "3s":
-            ret += v.grade1 + "mi"
-        elif pn == "3d":
-            ret += v.syllable+ "vaḥ"
-        elif pn == "3p":
-            ret += v.syllable + "maḥ"
+        match pn:
+            case "1s":
+                ret += v.grade1 + "ti"
+            case "1d":
+                ret += v.syllable + "taḥ"
+            case "1p":
+                ret += v.grade0 + "anti"
+            case "2s":
+                ret += v.grade1 + "si"
+            case "2d":
+                ret += v.syllable + "thaḥ"
+            case "2p":
+                ret += v.syllable + "tha"
+            case "3s":
+                ret += v.grade1 + "mi"
+            case "3d":
+                ret += v.syllable+ "vaḥ"
+            case "3p":
+                ret += v.syllable + "maḥ"
         return ret
     
     def get_class_methods(class_, aorist):
-        if class_ == 1:
-            return [Parasmaipadi.class1_present]
-        elif class_ == 2:
-            return [Parasmaipadi.class2_present]
-        else:
-            return [Parasmaipadi.class3_present]
+        match (class_, aorist):
+            case (1, _):
+                return [Parasmaipadi.class1_present]
+            case (2, _):
+                return [Parasmaipadi.class2_present]
+            case _:
+                return [Parasmaipadi.class3_present]

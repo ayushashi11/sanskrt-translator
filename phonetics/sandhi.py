@@ -893,7 +893,12 @@ def complete_sandhi(text: str):
             .replace("ūe","ve")\
             .replace("ūo","vo")\
             .replace("hṉt","hat")\
-            .replace("gṁc","gac")
-    )
+            .replace("gṁc","gac")\
+            .replace("is","iṣ")\
+            .replace("es","eṣ")\
+            .replace("us","uṣ")\
+            .replace("os","oṣ")\
+            .replace("śt","ṣṭ")
+)
 
 vowels = ["ai"]+["au"]+list("aāiīuūṛṝḷḹeoṁṉ")
